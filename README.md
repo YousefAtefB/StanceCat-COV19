@@ -3,13 +3,13 @@
 The project aims to analyze people's opinions and feelings about the COVID-19 pandemic and vaccines using Twitter data. 
 The focus is on Arabic tweets related to COVID-19 vaccinations, which may contain different types of content, including rumors, advice, and information authentication.The project's goal is to build natural language processing (NLP) models to detect the stance towards vaccination and the content type of the tweet.
 
-## Dataset
+## Dataset 🗃️
 The training set contains 6988 samples, the dev set contains 1000 samples, and the test set contains 2000 samples. The stance detection labels represent whether the tweet author encourages and supports vaccination (Positive), refuses vaccination (Negative), or is neutral (Neither supports nor refuses vaccination). The category labels represent different types of tweet content, including information and news about vaccination, celebrities taking vaccinations ... etc
 
-# Project Pipeline 
+# Project Pipeline ♻️
 ![](Images/Picture1.png)
 
-## Preprocessing
+## Preprocessing 🧐
 
 Methods used for preprocessing: 
 
@@ -23,7 +23,7 @@ Methods used for preprocessing:
 8- Tokenize the tweet <br>
 9- Remove Stop-words <br>
 
-## Feature Extraction
+## Feature Extraction 🔨
 
 1- Pre-trained Embeddings (AraVec Twitter-CBOW) 
     AraVec is a pre-trained word embedding which was pre-trained on tweeter tweets, it has vocabulary size of 1,259,756, which we used to represent the words (and even emojis) in the form of a real-valued vector and that allows to encode the meaning of the word such that the words that are closer in the vector space are expected to be similar in meaning. 
@@ -34,7 +34,7 @@ Methods used for preprocessing:
 3- BOW (Bag of words)
     It is the same as TF-IDF, but the matrix just holds real counts of words in documents. Also, it is fed into PCA to reduce dimensionality. 
 
-## Model Training 
+## Model Training 🏗️
 
 1- BERT (AraBERT) + Linear Layer 
     AraBERT is a pre-trained transformer-based model, which allows to generate contextual word (and even emojis) embeddings meaning that the same word can have different representations for different contexts, it was also fined-tuned on our training set to get better performance, then passing that contextual embeddings to a linear layer followed by a SoftMax layer which allows to classify the sentence. 
@@ -52,7 +52,7 @@ Methods used for preprocessing:
 4- NB - Naïve Bayes 
     It is used the same as SVM for TFIDF and BOW features. 
 
-## Evaluation
+## Evaluation 📈
 
 After xperiments Arabert gives more robust results (especially when oversampling is applied) and gives the highest f1-score on both tasks, f1-score was considered as the main metric due to the unbalanced dataset. 
 
