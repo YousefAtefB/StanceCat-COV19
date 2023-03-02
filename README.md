@@ -23,7 +23,7 @@ Methods used for preprocessing:
 8- Tokenize the tweet <br>
 9- Remove Stop-words <br>
 
-## Feature Extraction 🔨
+## Feature Extraction 🏗️
 
 1- Pre-trained Embeddings (AraVec Twitter-CBOW) 
     AraVec is a pre-trained word embedding which was pre-trained on tweeter tweets, it has vocabulary size of 1,259,756, which we used to represent the words (and even emojis) in the form of a real-valued vector and that allows to encode the meaning of the word such that the words that are closer in the vector space are expected to be similar in meaning. 
@@ -34,7 +34,7 @@ Methods used for preprocessing:
 3- BOW (Bag of words)
     It is the same as TF-IDF, but the matrix just holds real counts of words in documents. Also, it is fed into PCA to reduce dimensionality. 
 
-## Model Training 🏗️
+## Model Training 🚸
 
 1- BERT (AraBERT) + Linear Layer 
     AraBERT is a pre-trained transformer-based model, which allows to generate contextual word (and even emojis) embeddings meaning that the same word can have different representations for different contexts, it was also fined-tuned on our training set to get better performance, then passing that contextual embeddings to a linear layer followed by a SoftMax layer which allows to classify the sentence. 
