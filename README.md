@@ -54,7 +54,7 @@ Methods used for preprocessing:
 
 ## Evaluation 📈
 
-After xperiments Arabert gives more robust results (especially when oversampling is applied) and gives the highest f1-score on both tasks, f1-score was considered as the main metric due to the unbalanced dataset. 
+After experimenting we realised Arabert gives more robust results (especially when oversampling is applied) and gives the highest F1-score on both tasks, F1-score was considered as the main metric due to the unbalanced dataset. 
 
 <table>
 <tr>
